@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-label="neural mental health panel">
+  <defs>
+    <linearGradient id="mind" x1="0" x2="1">
+      <stop offset="0" stop-color="#72f2df"/>
+      <stop offset=".5" stop-color="#ffd0c4"/>
+      <stop offset="1" stop-color="#ff8f2f"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="14" y="14" width="492" height="332" rx="24" fill="#160e13" stroke="#ffd0c4" stroke-opacity=".24"/>
+  <path d="M92 238c40-112 122-168 246-166 40 0 68 24 76 58 7 31-5 61-33 80 8 52-27 92-82 92H171c-63 0-100-25-79-64z" fill="none" stroke="url(#mind)" stroke-width="12" filter="url(#softGlow)"/>
+  <g stroke="url(#mind)" stroke-width="5" opacity=".8">
+    <path d="M162 202l68-62 56 46 74-62"/>
+    <path d="M188 250l72-56 62 34 54-48"/>
+    <path d="M214 118l30 62M330 108l-38 78"/>
+  </g>
+  <g fill="#160e13" stroke-width="6" stroke="url(#mind)" filter="url(#softGlow)">
+    <circle cx="162" cy="202" r="14"/>
+    <circle cx="230" cy="140" r="14"/>
+    <circle cx="286" cy="186" r="14"/>
+    <circle cx="360" cy="124" r="14"/>
+    <circle cx="188" cy="250" r="14"/>
+    <circle cx="260" cy="194" r="14"/>
+    <circle cx="322" cy="228" r="14"/>
+    <circle cx="376" cy="180" r="14"/>
+  </g>
+  <text x="52" y="64" fill="#ffd0c4" font-family="Arial, sans-serif" font-size="20" font-weight="700">MENTAL OS</text>
+  <text x="52" y="306" fill="#72f2df" font-family="Arial, sans-serif" font-size="16" font-weight="700">breath · focus · recovery · connection</text>
+</svg>
