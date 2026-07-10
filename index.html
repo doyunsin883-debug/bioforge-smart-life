@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BioForge is a smart workout, nutrition, sleep, skin care, and mental health routine planner with evidence-informed recommendations."
+    />
+    <meta property="og:title" content="BioForge | Smart Workout and Diet" />
+    <meta
+      property="og:description"
+      content="Build a science-informed routine for training, sleep, diet, skin, and mindset."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>BioForge | Smart Workout and Diet</title>
+  </head>
+  <body>
+    <main class="app" id="top">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="BioForge home">
+          <span>BF</span>
+          <strong>BioForge</strong>
+        </a>
+        <div class="navlinks">
+          <a href="#intake">Intake</a>
+          <a href="#physique">Body</a>
+          <a href="#coach">Coach</a>
+          <a href="#mental">Mind</a>
+          <a href="#report">Report</a>
+        </div>
+        <button class="iconButton" id="captureMode" type="button" title="Toggle screenshot mode">
+          <span aria-hidden="true">▣</span>
+          <span class="srOnly">Toggle screenshot mode</span>
+        </button>
+      </nav>
+
+      <section class="hero toolBand" id="intake">
+        <div class="heroBackdrop" aria-hidden="true"></div>
+        <div class="holoReactor" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="heroCopy">
+          <p class="eyebrow">Smart workout and diet engine</p>
+          <h1>Build your smart life operating system.</h1>
+          <p>
+            Enter basic training, health, sleep, nutrition, skin, and mindset signals.
+            BioForge calculates a practical plan locally in your browser. No database, no upload.
+          </p>
+          <div class="heroStats" aria-label="Core features">
+            <span>Workout</span>
+            <span>Sleep</span>
+            <span>Diet</span>
+            <span>Skin</span>
+            <span>Mental health</span>
+          </div>
+          <div class="agentBrief">
+            <strong>What you get immediately</strong>
+            <span>personal calories</span>
+            <span>best workout timing</span>
+            <span>sleep target</span>
+            <span>foods to prioritize</span>
+            <span>skin protocol</span>
+            <span>mindset routine</span>
+          </div>
+        </div>
+
+        <form class="intakePanel" id="profileForm">
+          <div class="panelTitle">
+            <span>01</span>
+            <h2>Body Intake</h2>
+          </div>
+          <div class="formGrid">
+            <label>
+              Age
+              <input id="age" type="number" min="13" max="85" value="20" required />
+            </label>
+            <label>
+              Sex
+              <select id="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other / prefer not to say</option>
+              </select>
+            </label>
+            <label>
+              Height (cm)
+              <input id="height" type="number" min="120" max="230" value="175" required />
+            </label>
+            <label>
+              Weight (kg)
+              <input id="weight" type="number" min="35" max="220" value="70" required />
+            </label>
+            <label>
+              Medical considerations
+              <select id="medical">
+                <option value="none">None known</option>
+                <option value="yes">Yes, use conservative guidance</option>
+              </select>
+            </label>
+            <label>
+              Training age
+              <select id="training">
+                <option value="0">New starter</option>
+                <option value="0.5">Under 1 year</option>
+                <option value="1.5">1-2 years</option>
+                <option value="3">2+ years</option>
+              </select>
+            </label>
+            <label>
+              Weekly training days
+              <select id="days">
+                <option value="3">3 days</option>
+                <option value="4" selected>4 days</option>
+                <option value="5">5 days</option>
+                <option value="6">6 days</option>
+              </select>
+            </label>
+            <label>
+              Daily movement
+              <select id="activity">
+                <option value="1.2">Mostly seated</option>
+                <option value="1.375" selected>Lightly active</option>
+                <option value="1.55">Moderately active</option>
+                <option value="1.725">Highly active</option>
+              </select>
+            </label>
+            <label>
+              Skin type
+              <select id="skinType">
+                <option value="balanced">Balanced</option>
+                <option value="dry">Dry</option>
+                <option value="oily">Oily</option>
+                <option value="sensitive">Sensitive</option>
+              </select>
+            </label>
+            <label>
+              Main skin goal
+              <select id="skinGoal">
+                <option value="glow">Glow and texture</option>
+                <option value="acne">Breakout control</option>
+                <option value="barrier">Barrier repair</option>
+                <option value="sun">Sun protection</option>
+              </select>
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section class="sensorBand" aria-label="Scientific sensor activation">
+        <div class="sensorCopy">
+          <p class="eyebrow">Sensor activation</p>
+          <h2>Biometric montage model</h2>
+          <p>
+            Your height, weight, age, goal, and training level drive a local estimate for
+            training volume, calorie range, sleep timing, skin protection, and mindset rituals.
+          </p>
+        </div>
+        <div class="sensorStage" id="sensorStage">
+          <img src="assets/medical-figure.svg" alt="Futuristic medical body scan illustration" />
+          <div class="scanLine"></div>
+          <div class="metricPill metricOne">BMI <strong id="liveBmi">22.9</strong></div>
+          <div class="metricPill metricTwo">TDEE <strong id="liveTdee">2400</strong></div>
+          <div class="metricPill metricThree">Goal <strong id="liveGoal">Recomp</strong></div>
+        </div>
+      </section>
+
+      <section class="coachBand" id="coach">
+        <div class="sectionHead">
+          <p class="eyebrow">Smart coach hub</p>
+          <h2>Train with a guided media layer.</h2>
+          <p>
+            Use these curated channels, guides, and communities to learn exercise form,
+            nutrition basics, stress control, and practical routine building. The cards use
+            original BioForge thumbnails so the interface stays premium and consistent.
+          </p>
+        </div>
+        <div class="coachGrid">
+          <article class="coachPanel tilt">
+            <div class="coachHeader">
+              <span class="coachIcon">FIT</span>
+              <div>
+                <p class="eyebrow">My Smart Fitness Coach</p>
+                <h3>Movement, form, strength</h3>
+              </div>
+            </div>
+            <div class="resourceList" id="fitnessResources"></div>
+          </article>
+
+          <article class="coachPanel tilt">
+            <div class="coachHeader">
+              <span class="coachIcon">MIND</span>
+              <div>
+                <p class="eyebrow">My Smart Mental Coach</p>
+                <h3>Stress, focus, confidence</h3>
+              </div>
+            </div>
+            <div class="resourceList" id="mentalResources"></div>
+          </article>
+
+          <article class="coachPanel tilt">
+            <div class="coachHeader">
+              <span class="coachIcon">FOOD</span>
+              <div>
+                <p class="eyebrow">My Smart Nutrition Coach</p>
+                <h3>Calories, plates, recovery</h3>
+              </div>
+            </div>
+            <div class="resourceList" id="nutritionResources"></div>
+          </article>
+
+          <article class="coachPanel tilt">
+            <div class="coachHeader">
+              <span class="coachIcon">SKIN</span>
+              <div>
+                <p class="eyebrow">My Smart Skin Coach</p>
+                <h3>Barrier, sunscreen, glow</h3>
+              </div>
+            </div>
+            <div class="resourceList" id="skinResources"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="selectorBand" id="physique">
+        <div class="sectionHead">
+          <p class="eyebrow">02 Desired body</p>
+          <h2>Choose the physique you want to build.</h2>
+        </div>
+        <div class="choiceGrid" id="goalChoices" role="radiogroup" aria-label="Desired body">
+          <button class="choice active" type="button" data-goal="recomp" aria-pressed="true">
+            <span class="bodyIcon recomp"></span>
+            <strong>Clean Recomposition</strong>
+            <em>Lose fat slowly while building useful muscle.</em>
+          </button>
+          <button class="choice" type="button" data-goal="lean" aria-pressed="false">
+            <span class="bodyIcon lean"></span>
+            <strong>Lean Athletic</strong>
+            <em>Sharp waist, visible definition, higher daily movement.</em>
+          </button>
+          <button class="choice" type="button" data-goal="muscle" aria-pressed="false">
+            <span class="bodyIcon muscle"></span>
+            <strong>Muscle Build</strong>
+            <em>Progressive overload, surplus calories, recovery priority.</em>
+          </button>
+          <button class="choice" type="button" data-goal="endurance" aria-pressed="false">
+            <span class="bodyIcon endurance"></span>
+            <strong>Hybrid Endurance</strong>
+            <em>Conditioning, strength retention, heart and stamina focus.</em>
+          </button>
+          <button class="choice" type="button" data-goal="starter" aria-pressed="false">
+            <span class="bodyIcon starter"></span>
+            <strong>Starter Reset</strong>
+            <em>Easy, safe, repeatable rhythm for beginners.</em>
+          </button>
+          <button class="choice" type="button" data-goal="performance" aria-pressed="false">
+            <span class="bodyIcon performance"></span>
+            <strong>Performance Frame</strong>
+            <em>Power, speed, mobility, and athletic posture.</em>
+          </button>
+        </div>
+      </section>
+
+      <section class="mentalBand" id="mental">
+        <div class="mentalPanel">
+          <div>
+            <p class="eyebrow">03 Mental health</p>
+            <h2>Pick the mentality you want to train.</h2>
+            <p>
+              This is not therapy or diagnosis. It turns everyday signals into low-risk
+              routines for stress control, focus, confidence, connection, and recovery.
+            </p>
+          </div>
+          <img src="assets/neural-panel.svg" alt="Animated neural wellness panel" />
+        </div>
+        <div class="mindForm">
+          <label>
+            Current stress level
+            <input id="stress" type="range" min="1" max="10" value="5" />
+            <span id="stressValue">5 / 10</span>
+          </label>
+          <label>
+            Average sleep quality
+            <select id="sleepQuality">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </label>
+          <label>
+            Attention style
+            <select id="attention">
+              <option value="scattered">Scattered</option>
+              <option value="steady" selected>Steady</option>
+              <option value="intense">Intense but burns out</option>
+            </select>
+          </label>
+          <label>
+            Caffeine timing
+            <select id="caffeine">
+              <option value="early">Before lunch</option>
+              <option value="late" selected>Afternoon sometimes</option>
+              <option value="none">Rarely / none</option>
+            </select>
+          </label>
+        </div>
+        <div class="choiceGrid compact" id="mindChoices" role="radiogroup" aria-label="Desired mentality">
+          <button class="choice active" type="button" data-mind="calm" aria-pressed="true">
+            <strong>Calm</strong><em>Reduce worry loops.</em>
+          </button>
+          <button class="choice" type="button" data-mind="success" aria-pressed="false">
+            <strong>Success</strong><em>Daily execution rhythm.</em>
+          </button>
+          <button class="choice" type="button" data-mind="confidence" aria-pressed="false">
+            <strong>Confidence</strong><em>Proof-based self-belief.</em>
+          </button>
+          <button class="choice" type="button" data-mind="focus" aria-pressed="false">
+            <strong>Focus</strong><em>Sharper attention blocks.</em>
+          </button>
+          <button class="choice" type="button" data-mind="connection" aria-pressed="false">
+            <strong>Love</strong><em>Connection and warmth.</em>
+          </button>
+          <button class="choice" type="button" data-mind="happiness" aria-pressed="false">
+            <strong>Happiness</strong><em>Energy and gratitude.</em>
+          </button>
+        </div>
+        <div class="actionRow">
+          <button class="primaryAction" id="generatePlan" type="button">
+            <span aria-hidden="true">⌁</span>
+            Generate Smart Routine
+          </button>
+          <button class="secondaryAction" id="resetDemo" type="button">
+            <span aria-hidden="true">↺</span>
+            Reset
+          </button>
+        </div>
+      </section>
+
+      <section class="reportBand" id="report" aria-live="polite">
+        <div class="sectionHead">
+          <p class="eyebrow">04 Generated plan</p>
+          <h2>Your screenshot-ready routine board.</h2>
+          <p>
+            Educational guidance only. If you have medical conditions, pain, pregnancy,
+            eating disorder history, medication concerns, or severe emotional distress,
+            work with a qualified professional.
+          </p>
+        </div>
+
+        <div class="reportControls">
+          <button id="printPlan" type="button">Print / Save PDF</button>
+          <button id="copyPlan" type="button">Copy Summary</button>
+        </div>
+
+        <div class="dashboard" id="dashboard">
+          <article class="resultPanel summaryPanel">
+            <p class="eyebrow">Analysis</p>
+            <h3 id="summaryTitle">Ready for input</h3>
+            <div class="scoreGrid" id="scoreGrid"></div>
+            <p id="safetyNote" class="note"></p>
+          </article>
+
+          <article class="resultPanel visualPanel">
+            <img src="assets/food-grid.svg" alt="Colorful smart diet food matrix illustration" />
+            <h3>Food intelligence</h3>
+            <p id="foodWhy">
+              Generate your plan to see a food matrix mapped to calories, protein, and skin support.
+            </p>
+          </article>
+
+          <article class="resultPanel" id="workoutCard">
+            <p class="eyebrow">Workout routine</p>
+            <h3>Training plan</h3>
+            <div class="resultText"></div>
+          </article>
+
+          <article class="resultPanel" id="sleepCard">
+            <p class="eyebrow">Sleep routine</p>
+            <h3>Recovery plan</h3>
+            <div class="resultText"></div>
+          </article>
+
+          <article class="resultPanel" id="dietCard">
+            <p class="eyebrow">Diet and calories</p>
+            <h3>Nutrition plan</h3>
+            <div class="resultText"></div>
+          </article>
+
+          <article class="resultPanel" id="skinCard">
+            <p class="eyebrow">Skin care</p>
+            <h3>Skin protocol</h3>
+            <div class="resultText"></div>
+          </article>
+
+          <article class="resultPanel" id="mindCard">
+            <p class="eyebrow">Mental health</p>
+            <h3>Mindset routine</h3>
+            <div class="resultText"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="agentCtaBand">
+        <div class="agentCta">
+          <div>
+            <p class="eyebrow">Need your own smart life agent?</p>
+            <h2>Make it custom. Make it yours.</h2>
+            <p>
+              If you want this system rebuilt around your own brand, goals, routines,
+              dashboard, AI assistant, or portfolio, contact the developer.
+            </p>
+            <button class="primaryAction" id="developerToggle" type="button">
+              <span aria-hidden="true">✦</span>
+              Build My Smart Life Agent
+            </button>
+          </div>
+          <aside class="developerCard" id="developerCard" hidden>
+            <img src="assets/developer-preview.svg" alt="Shin Do Yun portfolio preview thumbnail" />
+            <p class="eyebrow">Contact the developer</p>
+            <h3>Shin Do Yun Portfolio</h3>
+            <p>
+              View the deployed portfolio and request a custom smart coach, life dashboard,
+              or personal AI-style web experience.
+            </p>
+            <a href="https://doyun-shin-portfolio-20260709204728.netlify.app/" target="_blank" rel="noreferrer">
+              Open portfolio
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="scienceBand">
+        <div class="sectionHead">
+          <p class="eyebrow">Science basis</p>
+          <h2>Evidence rules used by this demo.</h2>
+        </div>
+        <div class="sourceGrid">
+          <a href="https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines" target="_blank" rel="noreferrer">
+            ODPHP Physical Activity Guidelines
+          </a>
+          <a href="https://www.cdc.gov/sleep/about/index.html" target="_blank" rel="noreferrer">
+            CDC Sleep Recommendations
+          </a>
+          <a href="https://www.cdc.gov/healthy-weight-growth/healthy-eating/index.html" target="_blank" rel="noreferrer">
+            CDC Healthy Eating
+          </a>
+          <a href="https://www.cdc.gov/healthy-weight-growth/be-sugar-smart/index.html" target="_blank" rel="noreferrer">
+            CDC Added Sugar Guidance
+          </a>
+          <a href="https://www.cdc.gov/skin-cancer/sun-safety/index.html" target="_blank" rel="noreferrer">
+            CDC Sun Safety
+          </a>
+          <a href="https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet" target="_blank" rel="noreferrer">
+            NIMH Stress and Anxiety
+          </a>
+          <a href="https://www.acefitness.org/resources/everyone/exercise-library/" target="_blank" rel="noreferrer">
+            ACE Exercise Library
+          </a>
+          <a href="https://thefitness.wiki/" target="_blank" rel="noreferrer">
+            Community Fitness Wiki
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
