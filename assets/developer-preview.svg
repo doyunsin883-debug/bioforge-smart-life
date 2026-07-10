@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390" role="img" aria-label="portfolio preview">
+  <defs>
+    <linearGradient id="p" x1="0" x2="1">
+      <stop offset="0" stop-color="#0d1112"/>
+      <stop offset=".55" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#c58a1b"/>
+    </linearGradient>
+    <linearGradient id="r" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffd0c4"/>
+      <stop offset="1" stop-color="#ff8f2f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="390" rx="28" fill="#0d1112"/>
+  <rect x="24" y="24" width="592" height="342" rx="18" fill="url(#p)" opacity=".86"/>
+  <rect x="48" y="54" width="544" height="54" rx="14" fill="#121a1b" opacity=".86"/>
+  <circle cx="82" cy="81" r="22" fill="#f5f7f6"/>
+  <text x="70" y="88" fill="#0d1112" font-family="Arial, sans-serif" font-size="18" font-weight="900">SDY</text>
+  <text x="392" y="88" fill="#f5f7f6" font-family="Arial, sans-serif" font-size="18" font-weight="800">Portfolio</text>
+  <text x="66" y="190" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="900">Shin Do Yun</text>
+  <text x="68" y="232" fill="#d6f7ef" font-family="Arial, sans-serif" font-size="24" font-weight="700">Data Analysis Portfolio</text>
+  <rect x="70" y="272" width="128" height="44" rx="10" fill="url(#r)"/>
+  <text x="100" y="301" fill="#241016" font-family="Arial, sans-serif" font-size="16" font-weight="900">OPEN</text>
+  <rect x="390" y="144" width="142" height="174" rx="24" fill="#f5f7f6" opacity=".94"/>
+  <circle cx="461" cy="204" r="42" fill="#211116"/>
+  <path d="M406 292c24-36 86-36 110 0" stroke="#211116" stroke-width="20" stroke-linecap="round"/>
+</svg>
