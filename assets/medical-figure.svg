@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 520" role="img" aria-label="medical body scan">
+  <defs>
+    <linearGradient id="rose" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffd0c4"/>
+      <stop offset=".55" stop-color="#ff8f2f"/>
+      <stop offset="1" stop-color="#72f2df"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="26" y="18" width="568" height="484" rx="28" fill="#160e13" stroke="#ffd0c4" stroke-opacity=".26"/>
+  <path d="M82 78h142M396 78h142M82 442h142M396 442h142" stroke="#72f2df" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+  <g opacity=".18" stroke="#ffd0c4">
+    <path d="M80 140h460M80 200h460M80 260h460M80 320h460M80 380h460"/>
+    <path d="M140 90v350M220 90v350M300 90v350M380 90v350M460 90v350"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="310" cy="116" r="48" fill="none" stroke="url(#rose)" stroke-width="10"/>
+    <path d="M310 168c-58 0-104 50-104 112v56c0 18 14 32 32 32h144c18 0 32-14 32-32v-56c0-62-46-112-104-112z" fill="none" stroke="url(#rose)" stroke-width="12"/>
+    <path d="M214 240c-42 22-66 62-72 118M406 240c42 22 66 62 72 118M248 376l-30 74M372 376l30 74" stroke="url(#rose)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M276 238h68M264 286h92M284 334h52" stroke="#72f2df" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g fill="#ff8f2f">
+    <circle cx="206" cy="280" r="8"/>
+    <circle cx="414" cy="280" r="8"/>
+    <circle cx="310" cy="334" r="8"/>
+  </g>
+  <path d="M118 118c34 19 74 20 108 2M394 118c34 19 74 20 108 2" stroke="#ff8f2f" stroke-width="5" fill="none" opacity=".8"/>
+</svg>
